@@ -1,0 +1,22 @@
+### PROTECT FILES ###
+<FilesMatch "\.(htacces|htpasswd|ini|fla|pad|log|sh)$">
+
+Order Allow,Deny
+Deny from all
+
+</FilesMatch>
+
+Rewrite Engine on
+RewriteRule index.php home
+RewriteRule about.php about
+RewriteRule contact.php contact
+RewriteRule admin.php panel
+
+Order Allow,Deny
+Allow 192.168.43.96
+
+Allow from all
+
+<Files "ipbase.ipfile">
+order allow,deny
+deny from all</Files>
